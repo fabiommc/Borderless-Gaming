@@ -154,7 +154,7 @@ namespace BorderlessGaming.Forms
 
         private void AddBorder(IntPtr targetHandle)
         {
-            var windowStyle = Native.GetWindowLong(targetHandle, WindowLongIndex.Style);
+            var windowStyle = Native.GetWindowLong(targetHandle, WindowLongIndex.ExtendedStyle);
 
             var newWindowStyle = (windowStyle
                                   | (WindowStyleFlags.ExtendedDlgmodalframe | WindowStyleFlags.Caption
@@ -163,6 +163,7 @@ namespace BorderlessGaming.Forms
                                      | WindowStyleFlags.Border | WindowStyleFlags.ExtendedComposited));
 
             Native.SetWindowLong(targetHandle, WindowLongIndex.Style, newWindowStyle);
+       
         }
 
         /// <summary>
