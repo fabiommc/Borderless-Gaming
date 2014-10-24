@@ -113,7 +113,7 @@ namespace BorderlessGaming.Forms
         private bool RemoveBorderRect(IntPtr targetHandle, Rectangle targetFrame)
         {
             // check windowstyles
-            var windowStyle = Native.GetWindowLong(targetHandle, WindowLongIndex.Style);
+            var windowStyle = Native.GetWindowLong(targetHandle, WindowLongIndex.ExtendedStyle);
 
             var newWindowStyle = (windowStyle
                                   & ~(WindowStyleFlags.ExtendedDlgmodalframe | WindowStyleFlags.Caption

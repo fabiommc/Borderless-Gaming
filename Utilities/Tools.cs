@@ -50,7 +50,9 @@ namespace BorderlessGaming.Utilities
 
         public static void CheckForUpdates()
         {
-            if (HasInternetConnection())
+            return;
+            // Disabled for now ;
+            /*   if (HasInternetConnection())
             {
                 var _releasePageURL = "";
                 Version _newVersion = null;
@@ -107,7 +109,7 @@ namespace BorderlessGaming.Utilities
                         GotoSite(_releasePageURL);
                     }
                 }
-            }
+            */
         }
     }
 }
